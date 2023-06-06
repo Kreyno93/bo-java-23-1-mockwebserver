@@ -46,7 +46,7 @@ class RickControllerTest {
     void getRickCharacters() throws Exception {
 
         mockWebServer.enqueue(new MockResponse()
-
+                        .setHeader("Content-Type", "application/json")
                 .setBody("""
                         {
                           "results": [

@@ -16,7 +16,8 @@ public class RickService {
         this.webClient = WebClient.create(rickApiUrl);
     }
 
-        public List<RickCharacter> getRickCharacters() {
+
+    public List<RickCharacter> getRickCharacters() {
             RickResponse rickResponse = Objects.requireNonNull(webClient.get()
                             .uri("/character")
                             .retrieve()
